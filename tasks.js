@@ -8,10 +8,12 @@ app.get('/tasks', function (request, response) {
 
   const username = request.query.username;
 
-  const someJson = {
-    message: "Hello " + username + ", how are you?"
-  };
-  response.json(someJson);
-})
+  const tasks = {
+    tasks: "buy some milk" + ", go for a run" + ", walk the dog"
+  }
+
+  response.json(tasks);
+
+});
 
 module.exports.handler = serverless(app);
